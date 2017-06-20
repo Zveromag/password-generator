@@ -1,0 +1,44 @@
+{
+	"extName": {
+		"message": "Генератор паролей"
+	},
+	"extDesc": {
+		"message": "Расширение которое позволяет без особого труда сгенерировать пароль любой сложности."
+	},
+	"titleSettings": {
+		"message": "Настройки"
+	},
+	"titleResult": {
+		"message": "Результат"
+	},
+	"optionSpec": {
+		"message": "Использовать спец. символы"
+	},
+	"optionCaps": {
+		"message": "Использовать большие буквы"
+	},
+	"optionNumber": {
+		"message": "Использовать цифры"
+	},
+	"optionCountChapters": {
+		"message": "Количество символов"
+	},
+	"btnMess": {
+		"message": "Генерировать"
+	},
+	"copyMess": {
+		"message": "Скопировано"
+	},
+	"optPageTitle": {
+		"message": "Настройки расширения"
+	},
+	"optPageTitleFull": {
+		"message": "Добро пожаловать на страницу настроек"
+	},
+	"btnOpt": {
+		"message": "Сохранить"
+	},
+	"optionTheme": {
+		"message": "Включить темный вариант оформления"
+	}
+}

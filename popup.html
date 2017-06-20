@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>__MSG_extName__</title>
+	<link rel="stylesheet" href="css/popup.css">
+	<script src="js/ls.js"></script>
+	<script src="js/localization.js"></script>
+	<script src="js/popup.js"></script>
+</head>
+<body>
+	<div class="pass">
+		<div class="pass__title">__MSG_extName__</div>
+		<div class="wrap">
+			<div class="col">
+				<form action="#" class="pass__form">
+						<div class="pass__section-title">__MSG_titleSettings__:</div>
+						<div class="pass__group">
+							<label for="pass-spec">__MSG_optionSpec__</label>
+							<input class="checkbox" id="pass-spec" type="checkbox" name="keySpec"/>
+							<span class="custom-check"></span>
+						</div>
+						<div class="pass__group">
+							<label for="pass-upper">__MSG_optionCaps__</label>
+							<input class="checkbox" id="pass-upper" type="checkbox" name="keyUpper"/>
+							<span class="custom-check"></span>
+						</div>
+						<div class="pass__group">
+							<label for="pass-number">__MSG_optionNumber__</label>
+							<input class="checkbox" id="pass-number" type="checkbox" name="keyNumber"/>
+							<span class="custom-check"></span>
+						</div>
+						<div class="pass__group">
+							<label for="">__MSG_optionCountChapters__</label>
+							<input id="pass-len" class="textfield" type="number" maxlength="2" minlength="1" max="20" min="8" value="8"/>
+						</div>
+						<button class="btn">__MSG_btnMess__</button>
+				</form>
+			</div>
+			<div class="col">
+				<div class="pass__result-list">
+					<div class="pass__section-title">__MSG_titleResult__:</div>
+					<div class="pass__result"></div>
+				</div>
+			</div>
+		</div>
+		<div class="pass__copy">__MSG_copyMess__</div>
+	</div>
+</body>
+</html>

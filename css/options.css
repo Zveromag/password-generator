@@ -1,0 +1,129 @@
+:root {
+	--font: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	--bgTheme: #fff;
+	--colorTheme: #262626;
+	--primaryColor: #2693e6;
+}
+body[data-dark='true'] {
+	--bgTheme: #232323;
+	--colorTheme: #fff;
+}
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	font-family: var(--font);
+	font-size: 1rem;
+	background-color: var(--bgTheme);
+	transition: background-color .4s;
+}
+h1 {
+	text-align: center;
+	color: var(--colorTheme)
+}
+.options {
+	width: 600px;
+	margin: 0 auto;
+	padding: 3rem;
+	box-shadow: 2px 4px 20px hsla(0, 0%, 0%, 0.2);
+}
+.option__group {
+	margin-bottom: 2rem;
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.option__group input,
+.btn {
+  outline: none;
+}
+.option__group label {
+	user-select: none;
+	color: var(--colorTheme);
+}
+.checkbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 9;
+}
+.custom-check {
+	border: 1px solid var(--primaryColor);
+	height: 20px;
+	width: 20px;
+	position: relative;
+}
+.custom-check::before {
+	content: '';
+	opacity: 0;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	transition: opacity .4s;
+	background: var(--primaryColor);
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.checkbox:checked + .custom-check::before {
+	opacity: 1;
+}
+.textfield {
+  width: 60px;
+	font-family: inherit;
+  padding: 5px;
+	font-size: 100%;
+	color: var(--colorTheme);
+	border: 1px solid var(--primaryColor);
+	background-color: transparent;
+	text-align: center;
+}
+.option__switch {
+	width: 60px;
+	padding: 16px 5px;
+	border: 1px solid var(--primaryColor);
+	position: relative;
+}
+.option__switch-item {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	background-color: var(--primaryColor);
+	top: 50%;
+	left: 0;
+	transform: translate(30%, -50%);
+	transition: transform .4s;
+}
+.checkbox:checked + .option__switch-item {
+	transform: translate(160%, -50%);
+}
+.btn {
+  background-color: var(--primaryColor);
+	border:0;
+  color: #fff;
+  padding: 10px 35px;
+  cursor: pointer;
+	font-family: inherit;
+	position: relative;
+	left: 50%;
+	letter-spacing: 2px;
+	font-weight: 600;
+	transform: translate(-50%, 0);
+	transition: opacity .4s;
+}
+.btn:hover {
+  opacity: .8;
+}

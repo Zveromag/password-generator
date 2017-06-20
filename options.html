@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>__MSG_optPageTitle__</title>
+	<link rel="stylesheet" href="css/options.css">
+</head>
+<body data-dark="false">
+	<h1>__MSG_optPageTitleFull__</h1>
+	<div class="options">
+		<form action="#" class="option__form">
+			<div class="option__group">
+				<label for="option-spec">__MSG_optionSpec__</label>
+				<input class="checkbox" id="option-spec" type="checkbox" name="keySpec"/>
+				<span class="custom-check"></span>
+			</div>
+			<div class="option__group">
+				<label for="option-upper">__MSG_optionCaps__</label>
+				<input class="checkbox" id="option-upper" type="checkbox" name="keyUpper" />
+				<span class="custom-check"></span>
+			</div>
+			<div class="option__group">
+				<label for="option-number">__MSG_optionNumber__</label>
+				<input class="checkbox" id="option-number" type="checkbox" name="keyNumber" />
+				<span class="custom-check"></span>
+			</div>
+			<div class="option__group">
+				<label for="optSwitch">__MSG_optionTheme__</label>
+				<div class="option__switch">
+					<input type="checkbox" class="checkbox" id="optSwitch">
+					<span class="option__switch-item"></span>
+				</div>
+			</div>
+			<div class="option__group">
+				<label for="">__MSG_optionCountChapters__</label>
+				<input id="option-len" class="textfield" type="number" maxlength="2" minlength="1" max="20" min="8" value="8" />
+			</div>
+			<button class="btn">__MSG_btnOpt__</button>
+		</form>
+	</div>
+	<script src="js/ls.js"></script>
+	<script src="js/localization.js"></script>
+	<script src="js/options.js"></script>
+</body>
+</html>

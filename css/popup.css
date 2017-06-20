@@ -1,0 +1,155 @@
+:root {
+	--font: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	--windowWidth: 600px;
+	--bgTheme: #fff;
+	--colorTheme: #262626;
+	--primaryColor: #2693e6;
+}
+body[data-dark='true'] {
+	--bgTheme: #232323;
+	--colorTheme: #fff;
+}
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	width: var(--windowWidth);
+	margin: 0;
+	font-family: var(--font);
+	font-size: 1rem;
+}
+.pass {
+  background-color: var(--bgTheme);
+  color: var(--colorTheme);
+  padding: 1rem 0;
+}
+.pass__title {
+  text-align: center;
+  font-size: 120%;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+.pass__section-title {
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.col {
+	width: 50%;
+	padding: 0 1.2rem;
+}
+.pass__group {
+	margin: 1rem 0;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+.pass__group label {
+	font-size: 80%;
+	user-select: none;
+}
+.pass__group input,
+.btn {
+  outline: none;
+}
+.checkbox {
+  position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+.custom-check {
+	border: 1px solid var(--primaryColor);
+	height: 20px;
+	width: 20px;
+	position: relative;
+}
+.custom-check::before {
+	content: '';
+	opacity: 0;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	transition: opacity .4s;
+	background: var(--primaryColor);
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.checkbox:checked + .custom-check::before {
+	opacity: 1;
+}
+.textfield {
+  width: 60px;
+	font-family: inherit;
+  padding: 5px;
+	font-size: 100%;
+	color: var(--colorTheme);
+	border: 1px solid var(--primaryColor);
+	text-align: center;
+	background-color: transparent;
+}
+.btn {
+  background-color: var(--primaryColor);
+  border: 0;
+  color: #fff;
+  padding: 10px 35px;
+  cursor: pointer;
+	font-family: inherit;
+	position: relative;
+	left: 50%;
+	letter-spacing: 2px;
+	font-weight: 600;
+	transform: translate(-50%, 0);
+	transition: opacity .4s;
+}
+.btn:hover {
+  opacity: .8;
+}
+.pass__result {
+	text-align: center;
+}
+.pass__item {
+	cursor: pointer;
+	font-weight: 400;
+	margin: .5rem 0;
+	letter-spacing: 2px;
+}
+.pass__item:hover {
+	text-shadow: 0 0 1px #fff;
+}
+.pass__item.iscopy {
+	opacity: .4;
+}
+.pass__copy {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 80%;
+	background: #fff;
+	color: #262626;
+	padding: 3px 10px;
+	transform: translate(0, -20%);
+	opacity: 0;
+	transition: opacity .4s, transform .4s;
+}
+.pass__copy.show {
+	opacity: 1;
+	transform: translate(0,0);
+}

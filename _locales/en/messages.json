@@ -1,0 +1,44 @@
+{
+	"extName": {
+		"message": "Password generator"
+	},
+	"extDesc": {
+		"message": "This extension allows you to easily generate a password of any complexity."
+	},
+	"titleSettings": {
+		"message": "Settings"
+	},
+	"titleResult": {
+		"message": "Result"
+	},
+	"optionSpec": {
+		"message": "Use special characters"
+	},
+	"optionCaps": {
+		"message": "Use Caps"
+	},
+	"optionNumber": {
+		"message": "Use numbers"
+	},
+	"optionCountChapters": {
+		"message": "Characters"
+	},
+	"btnMess": {
+		"message": "Generate"
+	},
+	"copyMess": {
+		"message": "Copied"
+	},
+	"optPageTitle": {
+		"message": "App settings"
+	},
+	"optPageTitleFull": {
+		"message": "Welcome to the settings page"
+	},
+	"btnOpt": {
+		"message": "Save"
+	},
+	"optionTheme": {
+		"message": "Include a dark version of the design"
+	}
+}
