@@ -47,10 +47,12 @@ h1 {
   outline: none;
 }
 .option__group label {
+	cursor: pointer;
 	user-select: none;
 	color: var(--colorTheme);
 }
 .checkbox {
+	cursor: pointer;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -107,8 +109,11 @@ h1 {
 	transform: translate(30%, -50%);
 	transition: transform .4s;
 }
-.checkbox:checked + .option__switch-item {
+.checkbox:checked + .option__switch .option__switch-item {
 	transform: translate(160%, -50%);
+}
+.btn-center {
+	text-align: center;
 }
 .btn {
   background-color: var(--primaryColor);
@@ -117,11 +122,8 @@ h1 {
   padding: 10px 35px;
   cursor: pointer;
 	font-family: inherit;
-	position: relative;
-	left: 50%;
 	letter-spacing: 2px;
 	font-weight: 600;
-	transform: translate(-50%, 0);
 	transition: opacity .4s;
 }
 .btn:hover {
