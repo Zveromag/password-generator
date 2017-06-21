@@ -36,7 +36,7 @@
 		"message": "Welcome to the settings page"
 	},
 	"btnOpt": {
-		"message": "Save"
+		"message": "Save and close"
 	},
 	"optionTheme": {
 		"message": "Include a dark version of the design"

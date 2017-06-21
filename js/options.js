@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		ls.setItem('dark', switchCheck.checked);
 		ls.setItem('len', len.value);
 
-		window.location.reload();
+		chrome.tabs.update({url:'chrome://newtab/'})
 	}
 
 	document.forms[0].addEventListener('submit', setOptions);
