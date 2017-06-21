@@ -40,5 +40,8 @@
 	},
 	"optionTheme": {
 		"message": "Include a dark version of the design"
+	},
+	"optionSync": {
+		"message": "Synchronize settings between browsers"
 	}
 }

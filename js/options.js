@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	var keyUpper = document.getElementById('option-upper');
 	var keyNumber = document.getElementById('option-number');
 	var len = document.getElementById('option-len');
+	var sync = document.getElementById('option-sync');
 
 	keySpec.checked = ls.getItem('specKey') === 'true';
 	keyUpper.checked = ls.getItem('upperKey') === 'true';
 	keyNumber.checked = ls.getItem('numberKey') === 'true';
+	sync.checked = ls.getItem('sync') === 'true';
 	switchCheck.checked = ls.getItem('dark') === 'true';
 	body.setAttribute('data-dark', ls.getItem('dark'));
 	len.value = ls.getItem('len');
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	function setOptions(e) {
+
 		e.preventDefault();
 
 		ls.setItem('specKey', keySpec.checked);
@@ -33,8 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		ls.setItem('numberKey', keyNumber.checked);
 		ls.setItem('dark', switchCheck.checked);
 		ls.setItem('len', len.value);
+		ls.setItem('sync', sync.checked);
 
-		chrome.tabs.update({url:'chrome://newtab/'})
+		if (sync.checked) {
+			saveSync();
+		}
+
+		chrome.tabs.update({url:'chrome://newtab/'});
 	}
 
 	document.forms[0].addEventListener('submit', setOptions);

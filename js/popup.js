@@ -106,7 +106,7 @@ PassGen.prototype.type = function (pass) {
 		}
 		container.textContent += pass[index];
 		index++;
-	}, 30)
+	}, 50)
 }
 
 document.addEventListener('DOMContentLoaded', function () {
