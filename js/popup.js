@@ -4,6 +4,8 @@ function PassGen() {
 
 	this.form = document.querySelector('.pass__form');
 	this.result = document.querySelector('.pass__result');
+	this.mess = document.querySelector('.pass__copy');
+	this.timer;
 	this.options = {
 		keySpec: '!@#$%^&*(){}[]:?~<>',
 		keyUpper: 'QWERTYUIOPASDFGHJKLZXCVBNM',
@@ -66,9 +68,13 @@ PassGen.prototype.copy = function (e) {
 
 	e.preventDefault();
 
+	if (this.timer) {
+		clearTimeout(this.timer);
+		this.mess.classList.remove('show');
+	}
+
 	var range = document.createRange();
 	var select = window.getSelection();
-	var mess = document.querySelector('.pass__copy');
 
 	range.selectNode(target);
 	select.removeAllRanges();
@@ -80,11 +86,11 @@ PassGen.prototype.copy = function (e) {
 		item.classList.remove('iscopy');
 	});
 	target.classList.add('iscopy');
-	mess.classList.add('show');
+	this.mess.classList.add('show');
 
-	setTimeout(function () {
-		mess.classList.remove('show');
-	}, 1000);
+	this.timer = setTimeout(function () {
+		this.mess.classList.remove('show');
+	}.bind(this), 1500);
 }
 
 PassGen.prototype.type = function (pass) {

@@ -5,7 +5,7 @@
 	--colorTheme: #262626;
 	--primaryColor: #2693e6;
 }
-body[data-dark='false'] {
+body[data-dark='true'] {
 	--bgTheme: #232323;
 	--colorTheme: #fff;
 }
