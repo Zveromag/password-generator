@@ -39,10 +39,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		ls.setItem('sync', sync.checked);
 
 		if (sync.checked) {
-			saveSync();
+			saveSync(function(){
+				chrome.tabs.update({ url: 'chrome://newtab/' });
+			});
 		}
 
-		chrome.tabs.update({url:'chrome://newtab/'});
 	}
 
 	document.forms[0].addEventListener('submit', setOptions);

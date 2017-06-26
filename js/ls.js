@@ -26,7 +26,7 @@ function getSync(test) {
 	});
 }
 
-function saveSync() {
+function saveSync(fn) {
 	var data = {};
 
 	Object.keys(defaultOpt).forEach(function (name) {
@@ -35,5 +35,7 @@ function saveSync() {
 		}
 	});
 
-	chrome.storage.sync.set(data);
+	chrome.storage.sync.set(data, function(){
+		fn();
+	});
 }
