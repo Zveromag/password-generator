@@ -43,5 +43,8 @@
 	},
 	"optionSync": {
 		"message": "Synchronize settings between browsers"
+	},
+	"optionHistory": {
+		"message": "Use password history"
 	}
 }

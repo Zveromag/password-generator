@@ -60,7 +60,7 @@ body {
 	position: relative;
 }
 .pass__group label {
-	font-size: 80%;
+	font-size: 90%;
 	user-select: none;
 	cursor: pointer;
 }
@@ -126,19 +126,27 @@ body {
   opacity: .8;
 }
 .pass__result {
-	text-align: center;
+	text-align: left;
 }
 .pass__item {
 	cursor: pointer;
 	font-weight: 400;
 	margin-bottom: .5rem;
-	letter-spacing: 2px;
+	position: relative;
+	padding-left: 2.5rem;
+	counter-increment: item;
+}
+.pass__item::before {
+	content: counter(item);
+	text-align: center;
+	background: #2693e6;
+	padding: 0 .4rem;
+	color: #fff;
+	position: absolute;
+	left: 0;
 }
 .pass__item:hover {
 	text-shadow: 0 0 1px #fff;
-}
-.pass__item.iscopy {
-	opacity: .4;
 }
 .pass__copy {
 	position: absolute;
@@ -150,9 +158,79 @@ body {
 	padding: 3px 10px;
 	transform: translate(0, -20%);
 	opacity: 0;
+	z-index: 200;
 	transition: opacity .4s, transform .4s;
 }
 .pass__copy.show {
 	opacity: 1;
 	transform: translate(0,0);
+}
+.history-icon {
+	fill: var(--primaryColor);
+	opacity: 1;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 25px;
+	height: 25px;
+	z-index: 110;
+	transition: opacity .4s;
+	filter: drop-shadow(0 0 4px rgba(0,0,0,0.4))
+}
+.history-icon:hover {
+	opacity: .6;
+}
+.history-drawer {
+	position: absolute;
+	background: var(--colorTheme);
+	width: 50%;
+	color: var(--bgTheme);
+	z-index: 100;
+	right: -50%;
+	top: 0;
+	height: 100%;
+	padding: 2.5rem;
+	box-shadow: -3px 0 7px rgba(0,0,0, .2);
+	transition: transform .4s;
+}
+.history-drawer__item {
+	margin-bottom: .4rem;
+	cursor: pointer;
+	opacity: 1;
+	transition: opacity .4s;
+	counter-increment: item;
+}
+.history-drawer__item::before {
+	content: counter(item);
+	background-color: var(--primaryColor);
+	color: #fff;
+	text-align: center;
+	padding: 0 .4rem;
+	margin-right: .4rem;
+	vertical-align: middle;
+}
+.history-drawer__item:hover {
+	opacity: .6;
+}
+.active-drawer .history-drawer {
+	transform: translateX(-100%);
+}
+.history__bg {
+	background: rgba(255, 255, 255, 0.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity .4s, z-index .4s;
+}
+.active-drawer .history__bg {
+	opacity: 1;
+	z-index: 10;
+}
+.iscopy {
+	opacity: .6;
 }

@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"default_locale": "en",
 	"name": "__MSG_extName__",
-	"version": "1.2.0",
+	"version": "2.0.0",
 	"description": "__MSG_extDesc__",
 	"options_page": "options.html",
 	"icons": {

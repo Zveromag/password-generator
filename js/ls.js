@@ -5,7 +5,9 @@ var defaultOpt = {
 	numberKey: false,
 	len: 8,
 	dark: false,
-	sync: false
+	sync: false,
+	history: false,
+	password: '[]'
 };
 
 Object.keys(defaultOpt).forEach(function (name) {
@@ -18,7 +20,7 @@ if (ls.getItem('sync') === 'true') {
 	getSync();
 }
 
-function getSync(test) {
+function getSync() {
 	chrome.storage.sync.get(function (syncData) {
 		Object.keys(syncData).forEach(function (name) {
 			ls.setItem(name, syncData[name]);

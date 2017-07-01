@@ -9,10 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	var keyNumber = document.getElementById('option-number');
 	var len = document.getElementById('option-len');
 	var sync = document.getElementById('option-sync');
+	var history = document.getElementById('option-history');
 
 	keySpec.checked = ls.getItem('specKey') === 'true';
 	keyUpper.checked = ls.getItem('upperKey') === 'true';
 	keyNumber.checked = ls.getItem('numberKey') === 'true';
+	history.checked = ls.getItem('history') === 'true';
 	sync.checked = ls.getItem('sync') === 'true';
 	switchCheck.checked = ls.getItem('dark') === 'true';
 	body.setAttribute('data-dark', ls.getItem('dark'));
@@ -37,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		ls.setItem('dark', switchCheck.checked);
 		ls.setItem('len', len.value);
 		ls.setItem('sync', sync.checked);
+		ls.setItem('history', history.checked);
 
 		if (sync.checked) {
 			saveSync(function(){
