@@ -135,6 +135,15 @@ body {
 	position: relative;
 	padding-left: 2.5rem;
 	counter-increment: item;
+	opacity: 0;
+	transform: translateX(-10px);
+	animation: showPass .5s ease-out forwards;
+}
+@keyframes showPass {
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
 .pass__item::before {
 	content: counter(item);
@@ -192,7 +201,15 @@ body {
 	height: 100%;
 	padding: 2.5rem;
 	box-shadow: -3px 0 7px rgba(0,0,0, .2);
+	overflow-y: scroll;
 	transition: transform .4s;
+}
+.history-drawer::-webkit-scrollbar {
+	width: 5px;
+}
+.history-drawer::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: var(--primaryColor);
 }
 .history-drawer__item {
 	margin-bottom: .4rem;

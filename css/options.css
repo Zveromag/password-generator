@@ -129,3 +129,20 @@ h1 {
 .btn:hover {
   opacity: .8;
 }
+.option__save {
+	position: fixed;
+	top: 0;
+	right: 0;
+	background: var(--primaryColor);
+	color: #fff;
+	padding: 1rem 3rem;
+	transform: translateX(100%);
+	border-radius: 0 0 0 3px;
+	opacity: 0;
+	text-align: center;
+	transition: transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity .4s;
+}
+.option__save.show {
+	transform: translateX(0);
+	opacity: 1;
+}

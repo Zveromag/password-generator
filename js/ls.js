@@ -37,7 +37,7 @@ function saveSync(fn) {
 		}
 	});
 
-	chrome.storage.sync.set(data, function(){
-		fn();
+	chrome.storage.sync.set(data, function(fn){
+		fn && fn();
 	});
 }

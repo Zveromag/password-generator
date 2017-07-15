@@ -36,7 +36,7 @@
 		"message": "Welcome to the settings page"
 	},
 	"btnOpt": {
-		"message": "Save and close"
+		"message": "Save settings"
 	},
 	"optionTheme": {
 		"message": "Include a dark version of the design"
@@ -46,5 +46,8 @@
 	},
 	"optionHistory": {
 		"message": "Use password history"
+	},
+	"saveOption": {
+		"message": "Settings saved"
 	}
 }
