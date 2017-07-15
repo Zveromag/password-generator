@@ -3,6 +3,7 @@
 	document.addEventListener('DOMContentLoaded', function () {
 
 		var body = document.body;
+		var timer;
 		var ls = window.localStorage;
 		var switchCheck = document.getElementById('optSwitch');
 		var switchBtn = document.querySelector('.option__switch-item');
@@ -50,7 +51,9 @@
 			}
 
 			optionSave.classList.add('show');
-			var timer = setTimeout(function () {
+
+			timer && clearTimeout(timer);
+			timer = setTimeout(function () {
 				optionSave.classList.remove('show');
 			}.bind(this), 2000);
 
