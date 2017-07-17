@@ -47,6 +47,9 @@
 	"optionHistory": {
 		"message": "Use password history"
 	},
+	"historyLength": {
+		"message": "Number of passwords stored in history"
+	},
 	"saveOption": {
 		"message": "Settings saved"
 	}

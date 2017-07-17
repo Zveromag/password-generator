@@ -47,6 +47,9 @@
 	"optionHistory": {
 		"message": "Использовать историю паролей"
 	},
+	"historyLength": {
+		"message": "Количество паролей хранимые в истории"
+	},
 	"saveOption": {
 		"message": "Настройки сохранены"
 	}

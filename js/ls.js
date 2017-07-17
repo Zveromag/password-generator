@@ -7,7 +7,8 @@ var defaultOpt = {
 	dark: false,
 	sync: false,
 	history: false,
-	password: '[]'
+	password: '[]',
+	historyLength: 50
 };
 
 Object.keys(defaultOpt).forEach(function (name) {

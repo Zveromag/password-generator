@@ -13,11 +13,14 @@
 		var len = document.getElementById('option-len');
 		var sync = document.getElementById('option-sync');
 		var history = document.getElementById('option-history');
+		var historyLen = document.getElementById('history-len');
 
 		keySpec.checked = ls.getItem('specKey') === 'true';
 		keyUpper.checked = ls.getItem('upperKey') === 'true';
 		keyNumber.checked = ls.getItem('numberKey') === 'true';
 		history.checked = ls.getItem('history') === 'true';
+		historyLen.value = ls.getItem('historyLength');
+		historyLen.disabled = (ls.getItem('history') === 'true')? false : true;
 		sync.checked = ls.getItem('sync') === 'true';
 		switchCheck.checked = ls.getItem('dark') === 'true';
 		body.setAttribute('data-dark', ls.getItem('dark'));
@@ -32,6 +35,15 @@
 			}
 		});
 
+		history.addEventListener('change', function() {
+			if (history.checked) {
+				historyLen.disabled = false;
+			}
+			else {
+				historyLen.disabled = true;
+			}
+		})
+
 		function setOptions(e) {
 
 			e.preventDefault();
@@ -45,6 +57,7 @@
 			ls.setItem('len', len.value);
 			ls.setItem('sync', sync.checked);
 			ls.setItem('history', history.checked);
+			ls.setItem('historyLength', historyLen.value);
 
 			if (sync.checked) {
 				saveSync();

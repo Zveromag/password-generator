@@ -46,6 +46,9 @@ h1 {
 .btn {
   outline: none;
 }
+.option__group input:disabled {
+	background: rgba(38, 147, 230, .2);
+}
 .option__group label {
 	cursor: pointer;
 	user-select: none;

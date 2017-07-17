@@ -123,7 +123,7 @@
 			};
 			var passwordDate = new Intl.DateTimeFormat(window.navigator.language, options).format(new Date());
 
-			if (passwords.length >= 50) {
+			if (passwords.length >= ls.getItem('historyLength')) {
 				passwords.shift();
 			}
 
