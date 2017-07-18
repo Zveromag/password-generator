@@ -11,6 +11,18 @@
 	"titleResult": {
 		"message": "Result"
 	},
+	"groupTitleGenerate": {
+		"message": "Generation"
+	},
+	"groupTitleSynx": {
+		"message": "Synchronization"
+	},
+	"groupTitleHistory": {
+		"message": "Password history"
+	},
+	"groupTitleView": {
+		"message": "Appearance"
+	},
 	"optionSpec": {
 		"message": "Use special characters"
 	},
@@ -49,6 +61,12 @@
 	},
 	"historyLength": {
 		"message": "Number of passwords stored in history"
+	},
+	"clearHistory": {
+		"message": "Clearing password history"
+	},
+	"clearHistoryBtn": {
+		"message": "Clear"
 	},
 	"saveOption": {
 		"message": "Settings saved"

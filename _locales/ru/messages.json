@@ -11,6 +11,18 @@
 	"titleResult": {
 		"message": "Результат"
 	},
+	"groupTitleGenerate": {
+		"message": "Генерация паролей"
+	},
+	"groupTitleSynx": {
+		"message": "Синхронизация"
+	},
+	"groupTitleHistory": {
+		"message": "История паролей"
+	},
+	"groupTitleView": {
+		"message": "Внешний вид"
+	},
 	"optionSpec": {
 		"message": "Использовать спец. символы"
 	},
@@ -49,6 +61,12 @@
 	},
 	"historyLength": {
 		"message": "Количество паролей хранимые в истории"
+	},
+	"clearHistory": {
+		"message": "Очистка истории паролей"
+	},
+	"clearHistoryBtn": {
+		"message": "Очистить"
 	},
 	"saveOption": {
 		"message": "Настройки сохранены"
