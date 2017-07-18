@@ -14,6 +14,7 @@
 		var sync = document.getElementById('option-sync');
 		var history = document.getElementById('option-history');
 		var historyLen = document.getElementById('history-len');
+		var clearHistoryBtn = document.getElementById('clear-history');
 
 		keySpec.checked = ls.getItem('specKey') === 'true';
 		keyUpper.checked = ls.getItem('upperKey') === 'true';
@@ -21,6 +22,7 @@
 		history.checked = ls.getItem('history') === 'true';
 		historyLen.value = ls.getItem('historyLength');
 		historyLen.disabled = (ls.getItem('history') === 'true')? false : true;
+		clearHistoryBtn.disabled = (ls.getItem('history') === 'true') ? false : true;
 		sync.checked = ls.getItem('sync') === 'true';
 		switchCheck.checked = ls.getItem('dark') === 'true';
 		body.setAttribute('data-dark', ls.getItem('dark'));
@@ -38,11 +40,23 @@
 		history.addEventListener('change', function() {
 			if (history.checked) {
 				historyLen.disabled = false;
+				clearHistoryBtn.disabled = false;
 			}
 			else {
 				historyLen.disabled = true;
+				clearHistoryBtn.disabled = true;
 			}
 		})
+
+		if (ls.getItem('history') === 'true') {
+			clearHistoryBtn.addEventListener('click', function(e) {
+				e.preventDefault();
+
+				ls.setItem('password', '[]');
+				chrome.storage.sync.set({ 'password': '[]' });
+			});
+		}
+
 
 		function setOptions(e) {
 

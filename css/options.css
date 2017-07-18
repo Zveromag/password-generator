@@ -3,6 +3,7 @@
 	--bgTheme: #fff;
 	--colorTheme: #262626;
 	--primaryColor: #2693e6;
+	--titleColor: #999;
 }
 body[data-dark='true'] {
 	--bgTheme: #232323;
@@ -48,6 +49,18 @@ h1 {
 }
 .option__group input:disabled {
 	background: rgba(38, 147, 230, .2);
+}
+.option__btn {
+	background: var(--primaryColor);
+	color: #fff;
+	border: 0;
+	padding: 10px 35px;
+	opacity: 1;
+	cursor: pointer;
+	transition: opacity .4s;
+}
+.option__btn:hover {
+	opacity: .8;
 }
 .option__group label {
 	cursor: pointer;
@@ -148,4 +161,27 @@ h1 {
 .option__save.show {
 	transform: translateX(0);
 	opacity: 1;
+}
+.option__title-group {
+	margin-bottom: 2rem;
+	text-align: center;
+	color: var(--titleColor);
+}
+.option__title-group::before {
+	content: '';
+	width: 100px;
+	height: 1px;
+	background: var(--titleColor);
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 1rem;
+}
+.option__title-group::after {
+	content: '';
+	width: 100px;
+	height: 1px;
+	background: var(--titleColor);
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 1rem;
 }
