@@ -10,6 +10,7 @@
 		var keySpec = document.getElementById('option-spec');
 		var keyUpper = document.getElementById('option-upper');
 		var keyNumber = document.getElementById('option-number');
+		var passCount = document.getElementById('option-pass-count');
 		var len = document.getElementById('option-len');
 		var sync = document.getElementById('option-sync');
 		var history = document.getElementById('option-history');
@@ -27,6 +28,7 @@
 		switchCheck.checked = ls.getItem('dark') === 'true';
 		body.setAttribute('data-dark', ls.getItem('dark'));
 		len.value = ls.getItem('len');
+		passCount.value = ls.getItem('passCount');
 
 		switchCheck.addEventListener('change', function() {
 			if (switchCheck.checked) {
@@ -67,6 +69,7 @@
 			ls.setItem('specKey', keySpec.checked);
 			ls.setItem('upperKey', keyUpper.checked);
 			ls.setItem('numberKey', keyNumber.checked);
+			ls.setItem('passCount', passCount.value);
 			ls.setItem('dark', switchCheck.checked);
 			ls.setItem('len', len.value);
 			ls.setItem('sync', sync.checked);

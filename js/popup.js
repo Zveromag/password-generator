@@ -46,7 +46,7 @@
 		var len = this.form.querySelector('#pass-len').value;
 		var checkboxs = Array.prototype.slice.call(this.form.querySelectorAll('[type=checkbox]:checked'));
 		var words = this.options.keyLower;
-		var passCount = 6;
+		var passCount = ls.getItem('passCount');
 
 		checkboxs.forEach(function (checkbox) {
 			var name = checkbox.getAttribute("name");

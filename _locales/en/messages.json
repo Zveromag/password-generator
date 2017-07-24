@@ -35,6 +35,9 @@
 	"optionCountChapters": {
 		"message": "Characters"
 	},
+	"optionCountPasswords": {
+		"message": "Passwords count"
+	},
 	"btnMess": {
 		"message": "Generate"
 	},

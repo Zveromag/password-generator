@@ -4,6 +4,7 @@ var defaultOpt = {
 	upperKey: false,
 	numberKey: false,
 	len: 8,
+	passCount: 6,
 	dark: false,
 	sync: false,
 	history: false,

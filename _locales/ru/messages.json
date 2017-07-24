@@ -35,6 +35,9 @@
 	"optionCountChapters": {
 		"message": "Количество символов"
 	},
+	"optionCountPasswords": {
+		"message": "Количество генерируемых паролей"
+	},
 	"btnMess": {
 		"message": "Генерировать"
 	},
