@@ -190,3 +190,20 @@ h1 {
 	vertical-align: middle;
 	margin-left: 1rem;
 }
+.notification {
+	position: fixed;
+	color: #fff;
+	background: #333;
+	box-shadow: 1px 3px 10px 1px rgba(0,0,0,.15);
+	border-radius: 3px;
+	padding: 1rem 3rem;
+	bottom: .3rem;
+	right: .3rem;
+	transform: translateX(100%);
+	opacity: 0;
+	transition: all .4s;
+}
+.show {
+	opacity: 1;
+	transform: translate(0);
+}

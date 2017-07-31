@@ -73,5 +73,8 @@
 	},
 	"saveOption": {
 		"message": "Settings saved"
+	},
+	"resetHistory": {
+		"message": "History cleared"
 	}
 }

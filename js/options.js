@@ -56,6 +56,8 @@
 
 				ls.setItem('password', '[]');
 				chrome.storage.sync.set({ 'password': '[]' });
+
+				notification(chrome.i18n.getMessage('resetHistory'));
 			});
 		}
 
@@ -63,8 +65,6 @@
 		function setOptions(e) {
 
 			e.preventDefault();
-
-			var optionSave = document.getElementById('optionSave');
 
 			ls.setItem('specKey', keySpec.checked);
 			ls.setItem('upperKey', keyUpper.checked);
@@ -80,12 +80,7 @@
 				saveSync();
 			}
 
-			optionSave.classList.add('show');
-
-			timer && clearTimeout(timer);
-			timer = setTimeout(function () {
-				optionSave.classList.remove('show');
-			}.bind(this), 2000);
+			notification(chrome.i18n.getMessage('saveOption'));
 
 		}
 

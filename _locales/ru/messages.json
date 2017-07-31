@@ -73,5 +73,8 @@
 	},
 	"saveOption": {
 		"message": "Настройки сохранены"
+	},
+	"resetHistory": {
+		"message": "История паролей очищена"
 	}
 }
